@@ -408,4 +408,4 @@ def makepack_internal(
             parse_mode=ParseMode.MARKDOWN,
         )
     else:
-        msg.reply_text("Failed to create sticker pack. Possibly due to blek mejik.")
+        msg.reply_text("Failed to create sticker pack. Possibly due to ata nhi tujhe.")
