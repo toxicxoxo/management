@@ -24,7 +24,7 @@ def announcestat(update: Update, context: CallbackContext) -> str:
         if args[0].lower() in ["on", "yes", "true"]:
             sql.enable_chat_log(update.effective_chat.id)
             update.effective_message.reply_text(
-                "I've enabled announcemets in this group. Now any admin actions in your group will be announced."
+                "I've enabled announcements in this group. Now any admin actions in your group will be announced."
             )
             logmsg = (
                 f"<b>{html.escape(chat.title)}:</b>\n"
@@ -36,7 +36,7 @@ def announcestat(update: Update, context: CallbackContext) -> str:
         elif args[0].lower() in ["off", "no", "false"]:
             sql.disable_chat_log(update.effective_chat.id)
             update.effective_message.reply_text(
-                "I've disabled announcemets in this group. Now admin actions in your group will not be announced."
+                "I've disabled announcements in this group. Now admin actions in your group will not be announced."
             )
             logmsg = (
                 f"<b>{html.escape(chat.title)}:</b>\n"
