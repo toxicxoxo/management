@@ -43,24 +43,24 @@ def inlinequery(update: Update, _) -> None:
     results: List = []
     inline_help_dicts = [
         {
-            "title": "Account info on Anie",
-            "description": "Look up a Telegram account in Anie database",
-            "message_text": "Click the button below to look up a person in Anie database using their Telegram ID",
-            "thumb_urL": "https://telegra.ph/file/8fd1b2351135e778700a0.jpg",
+            "title": "Account info on HOMIES",
+            "description": "Look up a Telegram account in Homies database",
+            "message_text": "Click the button below to look up a person in Homies database using their Telegram ID",
+            "thumb_urL": "https://telegra.ph/file/42c095a2ecbd65f81d1bc.jpg",
             "keyboard": ".info ",
         },
         {
             "title": "About",
-            "description": "Know about Anie",
+            "description": "Know about Homies",
             "message_text": "Click the button below to get to know about Kigyo.",
-            "thumb_urL": "https://telegra.ph/file/8fd1b2351135e778700a0.jpg",
+            "thumb_urL": "https://telegra.ph/file/42c095a2ecbd65f81d1bc.jpg",
             "keyboard": ".about ",
         },
         {
             "title": "Anime",
             "description": "Search anime and manga on AniList.co",
             "message_text": "Click the button below to search anime and manga on AniList.co",
-            "thumb_urL": "https://telegra.ph/file/8fd1b2351135e778700a0.jpg",
+            "thumb_urL": "https://telegra.ph/file/42c095a2ecbd65f81d1bc.jpg",
             "keyboard": ".anilist ",
         },
     ]
@@ -207,8 +207,8 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     about_text = f"""
-    Anie (@{context.bot.username})
-    Maintained by [Zaid](t.me/Timesisnotwaiting)
+    Homies (@{context.bot.username})
+    Maintained by [Homies](t.me/HOMIESASSITANT)
     Built with ❤️ using python-telegram-bot v{str(__version__)}
     Running on Python {python_version()}
     """
@@ -218,11 +218,11 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Support",
-                    url=f"https://t.me/AnieSupports",
+                    url=f"https://t.me/real_homies",
                 ),
                 InlineKeyboardButton(
                     text="Channel",
-                    url=f"https://t.me/AnieBots",
+                    url=f"https://t.me/real_homie",
                 ),
                 InlineKeyboardButton(
                     text='Ping',
@@ -232,12 +232,12 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
             ],
             [
                 InlineKeyboardButton(
-                    text="GitLab",
-                    url=f"https://www.gitlab.com/ITZ-ZAID",
+                    text="Homies",
+                    url=f"https://real_homies",
                 ),
                 InlineKeyboardButton(
-                    text="GitHub",
-                    url="https://www.github.com/ITZ-ZAID",
+                    text="Join Group",
+                    url="https://real_homies",
                 ),
             ],
         ])
@@ -247,7 +247,7 @@ def about(query: str, update: Update, context: CallbackContext) -> None:
         InlineQueryResultArticle
             (
             id=str(uuid4()),
-            title=f"About Anie (@{context.bot.username})",
+            title=f"About HOMIES (@{context.bot.username})",
             input_message_content=InputTextMessageContent(about_text, parse_mode=ParseMode.MARKDOWN,
                                                           disable_web_page_preview=True),
             reply_markup=kb
@@ -314,7 +314,7 @@ def spb(query: str, update: Update, context: CallbackContext) -> None:
             [
                 InlineKeyboardButton(
                     text="Report Error",
-                    url=f"https://t.me/AnieSupports",
+                    url=f"https://t.me/real_homies",
                 ),
                 InlineKeyboardButton(
                     text="Search again",
@@ -392,7 +392,7 @@ def media_query(query: str, update: Update, context: CallbackContext) -> None:
             title_ja = data["title"].get("romaji") or "N/A"
             format = data.get("format") or "N/A"
             type = data.get("type") or "N/A"
-            bannerimg = data.get("bannerImage") or "https://telegra.ph/file/8fd1b2351135e778700a0.jpg"
+            bannerimg = data.get("bannerImage") or "https://telegra.ph/file/42c095a2ecbd65f81d1bc.jpg"
             try:
                 des = data.get("description").replace("<br>", "").replace("</br>", "")
                 description = des.replace("<i>", "").replace("</i>", "") or "N/A"
@@ -411,7 +411,7 @@ def media_query(query: str, update: Update, context: CallbackContext) -> None:
             status = data.get("status") or "N/A"
             genres = data.get("genres") or "N/A"
             genres = ", ".join(genres)
-            img = f"https://img.anili.st/media/{data['id']}" or "https://telegra.ph/file/8fd1b2351135e778700a0.jpg"
+            img = f"https://img.anili.st/media/{data['id']}" or "https://telegra.ph/file/42c095a2ecbd65f81d1bc.jpg"
             aurl = data.get("siteUrl")
 
 
@@ -458,7 +458,7 @@ def media_query(query: str, update: Update, context: CallbackContext) -> None:
                 [
                     InlineKeyboardButton(
                         text="Report error",
-                        url="t.me/AnieSupports",
+                        url="t.me/real_homies",
                     ),
                     InlineKeyboardButton(
                         text="Search again",
