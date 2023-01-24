@@ -15,7 +15,7 @@ class Config(object):
     ASSISTANT_ID = getenv("ASSISTANT_ID", "5001113788")
     STRING_SESSION = getenv("STRING_SESSION", "1AZWarzkBu4PfJtIl4aLLSmpm57TaI618LVt5GQ6fAvLgkdOQwB7MU1z0jhYE4SpSH7FldLSF8n8BOY0c4AegA1VdJEQqc-PDmZDTFczF7UDckMppc5W3V9IhiUkHV7QMP9mJSORZW4Y6KJJ0YSatk4NsvtSc19PoQdS_INVXzJ7q0Da5eYWXCAvXTC0W-3mCPglkjY9MTTiXK--x39SlhfIWZM8nhSGXPeFzO--BMW20qMWvhgsJnz6hIRUvUNB5Gngvgt3P-X6P1-oIq_WTA2QJ78KNub2GTJbpLCNuSLkxkqYCHcwCKlvKyqeZMG-bYhJR-_AjlDRD3r9ImTHY6IQD0Tpiw7M=") #telethon
     OWNER_USERNAME = getenv("OWNER_USERNAME", "@HOMIESASSITANT")
-    DB_URI = getenv("DATABASE_URL", "mongodb+srv://homies:stanly@cluster0.otm2c.mongodb.net/?retryWrites=true&w=majority
+    DB_URI = getenv("DATABASE_URL", "postgres://iemqmhee:fCgaio3Y47y1pxzKvPiVXc5xKhpHCqUw@kashin.db.elephantsql.com/iemqmhee
 ")
     DB_URI = DB_URI.replace("postgres", "postgresql")
     MESSAGE_DUMP = getenv("MESSAGE_DUMP", "-1001658805766")
